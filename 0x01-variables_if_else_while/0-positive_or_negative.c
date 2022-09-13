@@ -25,11 +25,10 @@ printf("%i is zero\n", n);
 }
 else
 {
-printf("%i is positive\n", n);
+printf("%i is positive\n");
 }
 return (0);
-}
-			  }
+	}
 
 
 
