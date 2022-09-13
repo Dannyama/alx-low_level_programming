@@ -2,30 +2,35 @@
 #include <time.h>
 #include <stdlib.h>
 /**
- * main - Prints random number to variable
- * 
- * Return: Always (Succesful)
+ *main - main block
+ *Description: get a random number
+ *and display if number is positive or negative
+ *Return: 0 always
  */
 int main(void)
 {
-	int n;
-	char last[] = "Last digit of":
+int n;
 
-		srand(time(0)):
-			n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n > 0)
-	{
-		printf("%i is negative\n", n);
-	}
-	else if (n == 0)
-        {
-	printf("%i is zero\n", n);
-	}
-	else
-	{
-	printf("%i is positive\n", n);
-	}
-	return (0);
-        }
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+
+/* your code goes there */
+if (n < 0)
+{
+printf("%i is negative\n", n);
+}
+else if (n == 0)
+{
+printf("%i is zero\n", n);
+}
+else
+{
+printf("%i is positive\n", n);
+}
+return (0);
+}
+			  }
+
+
+
 
