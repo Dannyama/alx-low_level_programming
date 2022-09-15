@@ -1,28 +1,15 @@
 #include "main.h"
-
 /**
- * print_alphabet_x10 - print alphabet
- *
- * Return: Always 0.
+ * _islower - function to check for lowercase character
+ * @c:  is the int that will use for the argument of the function
+ * Return: 0
  */
-void print_alphabet_x10(void);
+int _islower(int c)
 {
-int alphabet;
-int count;
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+		return (0);
 }
-
-count = 0;
-while (count < 10)
-{
-for (alphabet = 'a' ; alphabet <= 'z'; alphabet++)
-{
-_putchar(alphabet);
-}
-
-count++;
-_putchar('\n');
-}
-
-
-}
-

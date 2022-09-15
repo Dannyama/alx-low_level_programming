@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-woid print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char alphabet = 'a';
 
@@ -16,6 +16,5 @@ woid print_alphabet(void)
 		_putchar(alphabet);
 		alphabet++;
 	}
-
-	_putchar('\n');
-}	
+_putchar('\n');
+}
