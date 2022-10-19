@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * print_last_digit - Prints the last digit of a number.
- * @n: The number in question.
+ * _abs - main function
  *
- * Return: Value of the last digit.
+ * @n: integer to make absolute
+ * Return: int or int times negative
+ *
  */
-int print_last_digit(int n)
+
+int _abs(int n)
 {
-	int last_digit = n % 10;
+	if (n > 0)
+		return (n);
+	else
+		return (n * -1);
 
-	if (last_digit < 0)
-		last_digit *= -1;
-
-	_putchar(last_digit + '0');
-
-	return (last_digit);
 }
