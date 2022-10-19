@@ -1,17 +1,46 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
-*main - prints count of multiples
-*of 3 or 5 below 1024
-*Return: return 0
+* print_times_table - prints times table
+* @n : times table to use
+* Return:void
 */
-int main(void)
+
+void print_times_table(int n)
 {
-int n, sum = 0;
-for (n = 0; n < 1024; n++)
+
+int a = 0, rep, b;
+
+if (n < 0 || n > 15)
+	return;
+
+while (a <= n)
 {
-if ((n % 3) == 0 || (n % 5) == 0)
-sum += n;
+	for (b = 0; b <= n; b++)
+	{
+		rep = a * b;
+		if (b == 0)
+			_putchar('0' + rep);
+		else if (rep < 10)
+		{
+			_putchar(' ');
+			_putchar(' ');
+			_putchar('0' + rep);
+		}
+		else if (rep < 100)
+		{
+			_putchar(' ');
+			_putchar('0' + rep / 10);
+			_putchar('0' + rep % 10);
+		}
+		else
+		{
+			_putchar('0' + rep / 100);
+			_putchar('0' + (rep - 100) / 10);
+			_putchar('0' + rep % 10);
+		}
+	}
+	_putchar('\n');
+	a++;
 }
-printf("%d\n", sum);
-return (0);
 }

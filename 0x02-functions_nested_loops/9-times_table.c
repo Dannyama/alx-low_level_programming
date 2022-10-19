@@ -1,13 +1,37 @@
 #include "main.h"
 
 /**
- * add - Adds two integers.
- * @num1: The first integer to be added.
- * @num2: The second integer to be added.
+ * times_table - times table function
  *
- * Return: The result of the addition.
  */
-int add(int num1, int num2)
+void times_table(void)
 {
-	return (num1 + num2);
+	int i;
+	int j;
+
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			int prod = j * i;
+
+			if (j == 0)
+			{
+				_putchar('0');
+			} else if (prod <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(prod + '0');
+			} else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(prod / 10 + '0');
+				_putchar(prod % 10 + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
