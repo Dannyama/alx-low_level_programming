@@ -1,23 +1,14 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - Prints all natural numbers from input to 98,
- *              in order separated by a comma followed by a space
- *              @n: The number to begin counting at.
+ * add - adding it up
+ * @a: first integer
+ * @b: second integer
+ *
+ * Return: sum of both integers
  */
-void print_to_98(int n)
-{
-	if (n >= 98)
-	{
-		while (n > 98)
-			printf("%d, ", n--);
-		printf("%d\n", n);
-	}
 
-	else
-	{
-		while (n < 98)
-			printf("%d, ", n++);
-		printf("%d\n", n);
-	}
+int add(int a, int b)
+{
+	return (a + b);
 }
